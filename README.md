@@ -66,7 +66,6 @@ developer.log('Using default export');
 ```
 
 ## How it Works
-
 The package checks `process.env.NODE_ENV` and suppresses all output when it equals `'production'`. In all other environments (development, test, etc.), it behaves exactly like the native `console` methods.
 
 ### Supported Methods
