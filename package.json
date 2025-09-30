@@ -1,0 +1,31 @@
+{
+  "name": "@onamfc/developer-log",
+  "version": "1.0.0",
+  "description": "A lightweight console.log wrapper that suppresses output in production",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "console",
+    "log",
+    "debug",
+    "development",
+    "production"
+  ],
+  "author": "onamfc",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.6.0",
+    "typescript": "^5.3.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onamfc/developer-log.git"
+  }
+}
