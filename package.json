@@ -1,6 +1,6 @@
 {
   "name": "@onamfc/developer-log",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A lightweight console.log wrapper that suppresses output in production",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
