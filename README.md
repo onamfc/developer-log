@@ -13,46 +13,46 @@ npm install @onamfc/developer-log
 Import and use just like you would use the native `console` object:
 
 ```typescript
-import { developer } from '@onamfc/developer-log';
+import { dev } from '@onamfc/developer-log';
 
 // Basic logging
-developer.log('Hello, world!');
-developer.error('An error occurred');
-developer.warn('This is a warning');
-developer.info('Informational message');
-developer.debug('Debug information');
+dev.log('Hello, world!');
+dev.error('An error occurred');
+dev.warn('This is a warning');
+dev.info('Informational message');
+dev.debug('Debug information');
 
 // Advanced methods
-developer.table([{ name: 'John', age: 30 }, { name: 'Jane', age: 25 }]);
-developer.trace('Stack trace');
-developer.dir({ foo: 'bar' });
+dev.table([{ name: 'John', age: 30 }, { name: 'Jane', age: 25 }]);
+dev.trace('Stack trace');
+dev.dir({ foo: 'bar' });
 
 // Grouping
-developer.group('My Group');
-developer.log('Inside group');
-developer.groupEnd();
+dev.group('My Group');
+dev.log('Inside group');
+dev.groupEnd();
 
-developer.groupCollapsed('Collapsed Group');
-developer.log('Hidden by default');
-developer.groupEnd();
+dev.groupCollapsed('Collapsed Group');
+dev.log('Hidden by default');
+dev.groupEnd();
 
 // Timing
-developer.time('operation');
+dev.time('operation');
 // ... your code ...
-developer.timeEnd('operation');
-developer.timeLog('operation', 'Checkpoint');
+dev.timeEnd('operation');
+dev.timeLog('operation', 'Checkpoint');
 
 // Counting
-developer.count('clicks');
-developer.count('clicks');
-developer.countReset('clicks');
+dev.count('clicks');
+dev.count('clicks');
+dev.countReset('clicks');
 
 // Assertions
-developer.assert(value === expected, 'Values do not match');
+dev.assert(value === expected, 'Values do not match');
 
 // Other methods
-developer.clear();
-developer.dirxml(document.body);
+dev.clear();
+dev.dirxml(document.body);
 ```
 
 ### Default Export
@@ -60,9 +60,9 @@ developer.dirxml(document.body);
 You can also use the default export:
 
 ```typescript
-import developer from '@onamfc/developer-log';
+import dev from '@onamfc/developer-log';
 
-developer.log('Using default export');
+dev.log('Using default export');
 ```
 
 ## How it Works
@@ -102,7 +102,7 @@ All standard console methods are supported:
 
 ## Migration from console
 
-Simply replace `console` with `developer`:
+Simply replace `console` with `dev`:
 
 ```typescript
 // Before
@@ -111,11 +111,11 @@ console.error('Error message');
 console.table(data);
 
 // After
-import { developer } from '@onamfc/developer-log';
+import { dev } from '@onamfc/developer-log';
 
-developer.log('Debug message');
-developer.error('Error message');
-developer.table(data);
+dev.log('Debug message');
+dev.error('Error message');
+dev.table(data);
 ```
 
 ## TypeScript
