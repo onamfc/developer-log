@@ -1,6 +1,6 @@
 type LogMethod = (...args: any[]) => void;
 
-interface Developer {
+interface Dev {
   log: LogMethod;
   error: LogMethod;
   warn: LogMethod;
@@ -31,7 +31,7 @@ const isProduction = (): boolean => {
 
 const noop = (): void => {};
 
-export const developer: Developer = {
+export const dev: Dev = {
   log: isProduction() ? noop : console.log.bind(console),
   error: isProduction() ? noop : console.error.bind(console),
   warn: isProduction() ? noop : console.warn.bind(console),
@@ -53,4 +53,4 @@ export const developer: Developer = {
   timeLog: isProduction() ? noop : console.timeLog.bind(console),
 };
 
-export default developer;
+export default dev;
